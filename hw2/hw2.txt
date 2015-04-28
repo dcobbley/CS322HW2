@@ -21,6 +21,13 @@ supporting materials, then check with me first; it probably isn't
 necessary.  Treat this as if you are working for a company that has very
 strict (and narrow) coding guidelines when it comes to x86-64
 programming!
+												-----------------------------------------
+												Summary:
+												-Use ATT syntax
+												-use instructions we know so far
+												-very strict guidelines
+												----------------------------------------
+
 
 Arrays:
 -------
@@ -48,6 +55,13 @@ down than the length that is stated at the front in each case:
 
     { 2, 5, 6, 7, 8 }
     { 2, 5, 6, 8, 7 }
+												-----------------------------------------
+												Summary:
+												-Array first element contains count of array
+												-Each element is 4bytes of data
+												- { 4, 0, 1, 2, 3 }
+												----------------------------------------
+
 
 Problems:
 ---------
@@ -56,6 +70,7 @@ x86-64 code that takes the starting addresses of two arrays, represented
 as above, in the rdi and rsi registers as its input and returns a single
 integer as its result in eax.
 
+													
 The six specific programs that you should implement for this homework
 assignment are as follows:
 
@@ -64,17 +79,46 @@ Program 1: The result should be the total value of the numbers in the
 	   each array.  The two arrays themselves should not be
 	   modified.
 
+												-----------------------------------------
+												Summary:
+												-sum value in one array
+												-sum values in other
+												-return addl of both
+												----------------------------------------
+
+
 Program 2: The result should be the total number of zeros in the first
 	   array plus the total number of nonzeros in the second array.
+												-----------------------------------------
+												Summary:
+												-
+												-
+												-
+												----------------------------------------
+
 
 Program 3: The result should be 1 and the contents of the first array
 	   should be reversed.  The second array should not be changed.
+												-----------------------------------------
+												Summary:
+												-
+												-
+												-
+												----------------------------------------
+
 
 Program 4: If the two input arrays have the same length, then the
 	   contents of the two arrays should be swapped and the return
 	   result should be 0.  If the two arrays have different
 	   lengths, then the return result should be the absolute value
 	   of the difference between their lengths.
+												-----------------------------------------
+												Summary:
+												-
+												-
+												-
+												----------------------------------------
+
 
 Program 5: If the two input arrays have the same length, then the
 	   contents of the two arrays should be compared in pairwise
@@ -100,6 +144,13 @@ Program 5: If the two input arrays have the same length, then the
 
 	   If the two arrays have different lengths, then the return
 	   result should be the sum of the lengths of the two arrays.
+												-----------------------------------------
+												Summary:
+												-
+												-
+												-
+												----------------------------------------
+
 
 Program 6: The overall effect of this program, viewing the contents
 	   of the two arrays as a single sequence of numbers, should be
