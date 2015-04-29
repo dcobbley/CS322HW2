@@ -91,9 +91,9 @@ Program 2: The result should be the total number of zeros in the first
 	   array plus the total number of nonzeros in the second array.
 												-----------------------------------------
 												Summary:
-												-
-												-
-												-
+												-count # of zeros in rdi
+												-count # of nonzeros in rsi
+												-sum and return in eax
 												----------------------------------------
 
 

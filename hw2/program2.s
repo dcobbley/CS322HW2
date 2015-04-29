@@ -29,11 +29,27 @@ f:
 		jmp 	2b				#if there are, jump back through the loop.
 
 #count number of non zeros in second array
+1:		movl	(%rsi), %ecx	#keep track of number of elements in the array
+		cmpl	$0, %ecx		#check if there are any elements in the array
+		je		1f				#move on if not
+
+2:		addq	$4, %rsi		#add 4 to the array to increment
+		movl	(%rsi), %edx	#put array element into temp to analyze
+		decl	%ecx			#decrement count of elements
+		cmpl	$0, %edx		#if array elements != 0, increment count
+		jne		3f
+
+		cmpl	$0, %ecx		#check if elements left in array
+		je		1f
+
+		jmp		2b
+
+3:		incl	%eax			#increment
+		cmpl	$0, %ecx
+		je		1f				#no elements left to check
+		jmp 	2b
 
 
-
-
-#sum number and return in eax
 1:
 
 
