@@ -10,8 +10,8 @@ all	: program1 program2 program3 program4 program5 program6
 	./program5 "Pairwise compares and inner product"
 	./program6 "Rotate"
 
-program1: program1.s main.c
-	$(CC) -o program1 main.c program1.s
+program1: program1.s main.c 
+	$(CC) -o program1 main.c program1.s 
 
 program2: program2.s main.c
 	$(CC) -o program2 main.c program2.s
