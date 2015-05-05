@@ -85,7 +85,7 @@ Program 1: The result should be the total value of the numbers in the
 												-sum values in other
 												-return addl of both
 												----------------------------------------
-
+												Done
 
 Program 2: The result should be the total number of zeros in the first
 	   array plus the total number of nonzeros in the second array.
@@ -95,15 +95,15 @@ Program 2: The result should be the total number of zeros in the first
 												-count # of nonzeros in rsi
 												-sum and return in eax
 												----------------------------------------
-
+												Done	
 
 Program 3: The result should be 1 and the contents of the first array
 	   should be reversed.  The second array should not be changed.
 												-----------------------------------------
 												Summary:
-												-
-												-
-												-
+												-put 1 into eax??
+												-Flip the first array
+												-dont do anything to the second
 												----------------------------------------
 
 
