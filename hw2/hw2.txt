@@ -114,9 +114,14 @@ Program 4: If the two input arrays have the same length, then the
 	   of the difference between their lengths.
 												-----------------------------------------
 												Summary:
-												-
-												-
-												-
+												-if (%rdi) == (%rsi)
+												-swap the two arrays
+												- put 0 in %eax
+
+												-else
+												-diff their lengths
+												-return positive value of diff
+												-	<<1 then >>1 ??? shift any sign bit out
 												----------------------------------------
 
 
