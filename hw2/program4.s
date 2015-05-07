@@ -10,16 +10,16 @@ f:
 		cmpl	(%rdi), %eax
 		jne 	fail
 		
-loop:	cmpl	$0, %eax
+loop:	cmpl	$0, %eax	#see if array is empty
 		je		done
 
-		addq 	$4, %rdi
-		addq	$4, %rsi
-		decl	%eax
+		addq 	$4, %rdi		#increment array forward
+		addq	$4, %rsi		#incremenet array forward
+		decl	%eax			#decremenet counter
 		
-		movl	(%rsi), %edx
-		xchgl	(%rdi), %edx
-		movl	%edx, (%rsi)
+		movl	(%rsi), %edx	#move rsi to temp
+		xchgl	(%rdi), %edx	#swap temp with rdi
+		movl	%edx, (%rsi)	#put rdis old value into rsi
 
 		jmp		loop
 
@@ -29,5 +29,9 @@ done:
 		ret
 
 fail:
-		movl	$0, %eax
+		movl	(%rdi), %edx
+		cmpl	%edx, %eax
+		jge		1f
+		xchgl	%edx, %eax
+1:		subl	%edx, %eax
 		ret

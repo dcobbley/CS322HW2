@@ -30,12 +30,16 @@ int main() {
   int b[] = { 3, 4, 5, 6 };
   int c[] = { 0 };
   int d[] = { 3, 0, 0, 7 };
+  int e[] = { 1, 5};
 
   test("ab", a, b);
+  test("aa", a, a);
   test("bc", b, c);
   test("bd", b, d);
   test("db", d, b);
   test("ca", c, a);
   test("cc", c, c);
+  test("ae", a, e);
+  test("eb", e, b);
   return 0;
 }
